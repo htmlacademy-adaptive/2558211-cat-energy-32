@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <title>CAT ENERGY</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -12,8 +18,16 @@
 <body class="page__body">
   <header class="header">
     <a class="header__logo" href="./index.html">
-      <img class="header__logo-icon" src="#" width="33" height="38" alt="Cat Energy">
-      <img class="header__logo-text" src="#" width="101" height="18" alt="Текстовый логотип Cat Energy">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/logo-desktop.svg" width="70" height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/logo-tablet.svg" width="60" height="50">
+        <img class="header__logo-icon" src="./images/logo-mobile.svg" width="33" height="38" alt="Cat Energy">
+      </picture>
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/text-logo-desktop.svg" width="118" height="21">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/text-logo-tablet.svg" width="101" height="18">
+        <img class="header__logo-text" src="./images/text-logo-mobile.svg" width="101" height="18" alt="Текстовый логотип Cat Energy">
+      </picture>
     </a>
 
     <nav class="navigation">
@@ -40,6 +54,16 @@
       <h1 class="promo__title">Функциональное питание для котов</h1>
       <p class="promo__tagline">Занялся собой? Займись котом!</p>
       <a class="promo__button button" href="#">Подобрать программу</a>
+
+      <picture>
+        <source media="(min-width: 1440px)" srcset="./images/promo-desktop@1x.webp 1x, ./images/promo-desktop@2x.webp 2x" width="552" height="499" type="image/webp">
+        <source media="(min-width: 768px)" srcset="./images/promo-tablet@1x.webp 1x, ./images/promo-tablet@2x.webp 2x" width="709" height="609" type="image/webp">
+        <source media="(min-width: 320px)" srcset="./images/promo-mobile@1x.webp 1x, ./images/promo-mobile@2x.webp 2x" width="280" height="270" type="image/webp">
+
+        <source media="(min-width: 1440px)" srcset="./images/promo-desktop@1x.png 1x, ./images/promo-desktop@2x.png 2x" width="552" height="499" type="image/png">
+        <source media="(min-width: 768px)" srcset="./images/promo-tablet@1x.png 1x, ./images/promo-tablet@2x.png 2x" width="709" height="609" type="image/png">
+        <img class="promo__image" src="./images/promo-mobile@1x.png" srcset="./images/promo-mobile@2x.png 2x" width="280" height="270" alt="Промо изображение кошачьего питания">
+      </picture>
     </section>
 
     <section class="programs">
@@ -112,9 +136,23 @@
       </p>
 
       <div class="example__slider">
-        <img class="example__before" src="#" width="280" height="256" alt="Кот до">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./images/before-tablet@1x.webp 1x, ./images/before-tablet@2x.webp 2x" width="560" height="512" type="image/webp">
+          <source media="(min-width: 320px)" srcset="./images/before-mobile@1x.webp 1x, ./images/before-mobile@2x.webp 2x" width="280" height="256" type="image/webp">
+
+          <source media="(min-width: 768px)" srcset="./images/before-tablet@1x.png 1x, ./images/before-tablet@2x.png 2x" width="560" height="512" type="image/png">
+          <img class="example__before" src="./images/before-mobile@1x.png" srcset="./images/before-mobile@2x.png 2x" width="280" height="256" alt="Кот до">
+        </picture>
+
         <button class="example__slider-button" type="button">\/</button>
-        <img class="example__after" src="#" width="280" height="256" alt="Кот после">
+
+        <picture>
+          <source media="(min-width: 768px)" srcset="./images/after-tablet@1x.webp 1x, ./images/after-tablet@2x.webp 2x" width="560" height="512" type="image/webp">
+          <source media="(min-width: 320px)" srcset="./images/after-mobile@1x.webp 1x, ./images/after-mobile@2x.webp 2x" width="280" height="256" type="image/webp">
+
+          <source media="(min-width: 768px)" srcset="./images/after-tablet@1x.png 1x, ./images/after-tablet@2x.png 2x" width="560" height="512" type="image/png">
+          <img class="example__after" src="./images/after-mobile@1x.png" srcset="./images/after-mobile@2x.png 2x" width="280" height="256" alt="Кот после">
+        </picture>
       </div>
     </section>
 
@@ -135,7 +173,7 @@
 
   <footer class="footer">
     <a class="footer__logo" href="./index.html">
-      <img class="footer__logo-text" src="#" width="128" height="24" alt="Текстовый логотип Cat Energy">
+      <img class="footer__logo-text" src="./images/footer-logo.svg" width="128" height="24" alt="Текстовый логотип Cat Energy">
     </a>
 
     <ul class="social-list">
@@ -152,7 +190,7 @@
 
     <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
       <span class="copyright__text">HTML Academy</span>
-      <img class="copyright__logo" src="#" width="27" height="34" alt="HTML Academy">
+      <img class="copyright__logo" src="./images/academy-logo.svg" width="27" height="34" alt="Логотип HTML Academy">
     </a>
   </footer>
 </body>
