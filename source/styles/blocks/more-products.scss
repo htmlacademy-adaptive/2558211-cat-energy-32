@@ -1,0 +1,30 @@
+.more-products__title {
+  font-family: $secondary-font;
+  font-size: 16px;
+  color: $dark-text-lighten;
+  line-height: 1.25;
+  font-weight: $font-weight-normal;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.more-products__text {
+  font-size: 12px;
+  color: $gray-text;
+  line-height: 1.33;
+  font-weight: $font-weight-normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1.12;
+  }
+}
+
+.more-products__button {
+  font-size: 16px;
+  line-height: 1.25;
+}

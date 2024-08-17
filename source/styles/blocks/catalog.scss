@@ -1,0 +1,17 @@
+.catalog__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: $font-weight-normal;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+  }
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

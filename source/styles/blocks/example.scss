@@ -1,0 +1,73 @@
+.example {
+  background-color: $bg-secondary;
+}
+
+.example__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 1.11;
+  font-weight: $font-weight-normal;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
+
+.example__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.example__description {
+  font-size: 14px;
+  line-height: 1.28;
+  font-weight: $font-weight-normal;
+  color: $gray-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.example__value {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+}
+
+.example__item-description {
+  font-size: 12px;
+  line-height: 1;
+  color: $gray-text;
+  text-transform: lowercase;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+}
+
+.example__total {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 1.42;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+  }
+}

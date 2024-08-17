@@ -1,0 +1,44 @@
+.promotions__title {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: $font-weight-normal;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+  }
+}
+
+.promotions__text {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: $font-weight-normal;
+  color: $dark-text;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+}
+
+.promotions__input {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: $font-weight-normal;
+  color: $gray-text;
+  text-transform: uppercase;
+  border: 1px solid $light-gray;
+}
+
+.promotions__button {
+  font-size: 20px;
+  line-height: 1.3;
+}

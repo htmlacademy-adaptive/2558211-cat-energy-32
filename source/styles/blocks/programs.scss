@@ -1,0 +1,43 @@
+.programs__element {
+  background-color: $bg-secondary;
+  font-weight: $font-weight-normal;
+}
+
+.programs__title {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 1.54;
+  color: $dark-text;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 1;
+  }
+}
+
+.programs__description {
+  font-size: 14px;
+  line-height: 1.28;
+  color: $gray-text;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $dark-text;
+  }
+}
+
+.programs__link {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 1;
+  color: $dark-text;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}

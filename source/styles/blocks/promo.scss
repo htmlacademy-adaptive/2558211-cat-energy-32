@@ -1,0 +1,43 @@
+.promo {
+  font-family: $secondary-font;
+  color: $light-text;
+  background-color: $bg-primary;
+
+  @media (min-width: $tablet-width) {
+    color: $dark-text;
+    background-color: $bg-default;
+  }
+}
+
+.promo__title {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: $font-weight-normal;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+  }
+}
+
+.promo__tagline {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: $font-weight-normal;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.promo__button {
+  font-size: 16px;
+  line-height: 1.25;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}

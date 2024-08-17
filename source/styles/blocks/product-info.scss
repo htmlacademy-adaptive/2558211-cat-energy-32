@@ -1,0 +1,17 @@
+.product-info {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-info__row {
+  font-size: 12px;
+  color: $gray-text;
+  line-height: 1.33;
+  font-weight: $font-weight-normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}

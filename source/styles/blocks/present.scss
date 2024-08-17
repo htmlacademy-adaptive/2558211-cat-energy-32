@@ -1,0 +1,11 @@
+.present {
+  background-color: $bg-primary;
+}
+
+.present__text {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: $font-weight-normal;
+  color: $light-text;
+  margin: 0;
+}

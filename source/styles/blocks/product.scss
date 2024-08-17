@@ -1,0 +1,25 @@
+.product {
+  @media (min-width: $tablet-width) {
+    background-color: $bg-secondary;
+  }
+}
+
+.product__title {
+  font-family: $secondary-font;
+  font-size: 16px;
+  color: $dark-gray-text;
+  line-height: 1.25;
+  font-weight: $font-weight-normal;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.product__button {
+  font-size: 16px;
+  line-height: 1.25;
+}
