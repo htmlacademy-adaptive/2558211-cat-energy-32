@@ -1,5 +1,9 @@
 .example {
-  background-color: $bg-secondary;
+  background-color: $bg-light;
+
+  @media (min-width: $desktop-width) {
+    background-color: $bg-secondary;
+  }
 }
 
 .example__title {
@@ -22,6 +26,7 @@
 }
 
 .example__description {
+  font-family: $primary-font;
   font-size: 14px;
   line-height: 1.28;
   font-weight: $font-weight-normal;
@@ -47,6 +52,7 @@
 }
 
 .example__item-description {
+  font-family: $primary-font;
   font-size: 12px;
   line-height: 1;
   color: $gray-text;

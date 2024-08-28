@@ -12,6 +12,7 @@
 }
 
 .about__list {
+  font-family: $primary-font;
   font-size: 14px;
   line-height: 1.28;
   font-weight: $font-weight-normal;
@@ -23,6 +24,28 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 1.5;
+  }
+}
+
+.about__item {
+  &::before {
+    background-color: $bg-primary;
+  }
+
+  &--leaf::before {
+    @include icon-img (30px, 32px, url("../../icons/stack.svg#leaf"));
+  }
+
+  &--watter::before {
+    @include icon-img (27px, 29px, url("../../icons/stack.svg#watter"));
+  }
+
+  &--eat::before {
+    @include icon-img (26px, 30px, url("../../icons/stack.svg#eat"));
+  }
+
+  &--timer::before {
+    @include icon-img (27px, 31px, url("../../icons/stack.svg#timer"));
   }
 }
 

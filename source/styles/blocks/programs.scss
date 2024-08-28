@@ -1,6 +1,34 @@
 .programs__element {
   background-color: $bg-secondary;
   font-weight: $font-weight-normal;
+
+  &--slim::before {
+    @include icon-img (50px, 53px, url("../../icons/stack.svg#cat-slim"));
+
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      height: 211px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 106px;
+    }
+  }
+
+  &--pro::before {
+    @include icon-img (67px, 50px, url("../../icons/stack.svg#cat-pro"));
+
+    @media (min-width: $tablet-width) {
+      width: 268px;
+      height: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 134px;
+      height: 100px;
+    }
+  }
 }
 
 .programs__title {
@@ -9,6 +37,7 @@
   line-height: 1.54;
   color: $dark-text;
   text-transform: uppercase;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -17,6 +46,7 @@
 }
 
 .programs__description {
+  font-family: $primary-font;
   font-size: 14px;
   line-height: 1.28;
   color: $gray-text;
@@ -35,6 +65,14 @@
   line-height: 1;
   color: $dark-text;
   text-transform: uppercase;
+
+  &::after {
+    @include mask-img (24px, 12px, url("../../icons/stack.svg#arrow"), $dark-text);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;

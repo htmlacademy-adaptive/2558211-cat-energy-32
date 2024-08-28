@@ -1,3 +1,14 @@
+.more-products {
+  &::before {
+    @include icon-img (30px, 30px, url("../../icons/stack.svg#plus"));
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
 .more-products__title {
   font-family: $secondary-font;
   font-size: 16px;
@@ -13,6 +24,7 @@
 }
 
 .more-products__text {
+  font-family: $primary-font;
   font-size: 12px;
   color: $gray-text;
   line-height: 1.33;

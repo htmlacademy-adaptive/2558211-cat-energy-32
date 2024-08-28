@@ -3,3 +3,27 @@
   padding: 0;
   list-style: none;
 }
+
+.social-list__link {
+  &--vk {
+    @include mask-img (28px, 22px, url("../../icons/stack.svg#vk"), $light-gray-text);
+  }
+
+  &--youtube {
+    @include mask-img (28px, 22px, url("../../icons/stack.svg#youtube"), $light-gray-text);
+  }
+
+  &--tg {
+    @include mask-img (28px, 22px, url("../../icons/stack.svg#tg"), $light-gray-text);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $bg-primary;
+  }
+
+  &:active {
+    background-color: $bg-primary;
+    opacity: 0.3;
+  }
+}

@@ -1,8 +1,18 @@
 .present {
   background-color: $bg-primary;
+
+  &::before {
+    @include icon-img (78px, 81px, url("../../icons/stack.svg#present"));
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 83px;
+    }
+  }
 }
 
 .present__text {
+  font-family: $primary-font;
   font-size: 16px;
   line-height: 1.25;
   font-weight: $font-weight-normal;

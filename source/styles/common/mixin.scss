@@ -7,3 +7,26 @@
     src: $font-src;
   }
 }
+
+@mixin icon-img ($width, $height, $src) {
+  content: "";
+  display: block;
+  width: $width;
+  height: $height;
+  background-image: $src;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin mask-img ($width, $height, $src, $bg) {
+  content: "";
+  display: block;
+  width: $width;
+  height: $height;
+  mask-image: $src;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  background: $bg;
+}
