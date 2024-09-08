@@ -1,10 +1,50 @@
+.header {
+  @include flex (row, space-between, center);
+  width: 100%;
+  min-height: 65px;
+  padding: 14px 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 30px;
+    align-self: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 55px 110px;
+    max-width: 1440px;
+  }
+
+  &--main {
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+  }
+}
+
 .header__logo {
+  @include flex (row, space-between, center);
+  gap: 56px;
+
   &:hover,
-  &:focus {
+  &:focus-visible {
     opacity: 0.8;
   }
 
   &:active {
     opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
   }
 }

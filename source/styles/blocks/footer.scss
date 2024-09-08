@@ -1,3 +1,31 @@
 .footer {
+  width: 100%;
   background-color: $bg-secondary;
+}
+
+.footer__wrapper {
+  @include flex (column, space-between, center);
+  margin: 0 auto;
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    padding: 55px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    padding: 66px 110px;
+  }
+}
+
+.footer__logo {
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid $bg-accent-dark;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding: 6px 0;
+  }
 }

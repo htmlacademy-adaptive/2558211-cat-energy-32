@@ -1,7 +1,15 @@
 .social-list {
+  @include flex (row, space-between, center);
+  gap: 24px;
   margin: 0;
-  padding: 0;
+  padding: 20px 0;
   list-style: none;
+  border-bottom: 1px solid $bg-accent-dark;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .social-list__link {

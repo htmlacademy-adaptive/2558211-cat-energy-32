@@ -4,6 +4,7 @@
   text-align: center;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
 
   &--primary {
     color: $light-text;
@@ -13,5 +14,9 @@
   &--secondary {
     color: $gray-text;
     background-color: $bg-secondary;
+  }
+
+  &--transparent {
+    background-color: transparent;
   }
 }

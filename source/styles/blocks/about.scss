@@ -1,3 +1,17 @@
+.about {
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 45px 30px 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    padding: 0 110px 69px;
+  }
+}
+
 .about__title {
   font-family: $secondary-font;
   font-size: 36px;
@@ -8,44 +22,109 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 1;
+    margin-bottom: 32px;
   }
 }
 
 .about__list {
+  @include flex (column, space-between, center);
+  gap: 20px;
   font-family: $primary-font;
   font-size: 14px;
   line-height: 1.28;
   font-weight: $font-weight-normal;
   color: $gray-text;
   margin: 0;
-  padding: 0;
+  padding: 40px 0 49px;
   list-style: none;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 1.5;
+    padding: 0;
+    display: grid;
+    justify-content: flex-start;
+    gap: 37px 137px;
+    grid-template-columns: 230px 245px;
+
+    counter-reset: section;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include flex (row, space-between, center);
+    gap: 77px;
   }
 }
 
 .about__item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  align-items: center;
+
   &::before {
     background-color: $bg-primary;
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    gap: 31px;
+    padding: 40px 0 57px;
+
+    &::after {
+      content: counter(section);
+      font-family: $secondary-font;
+      font-weight: $font-weight-normal;
+      font-size: 280px;
+      line-height: 1;
+      position: absolute;
+      counter-increment: section 1;
+      color: $bg-secondary;
+      justify-self: end;
+      z-index: -1;
+    }
   }
 
   &--leaf::before {
-    @include icon-img (30px, 32px, url("../../icons/stack.svg#leaf"));
+    @include icon-img (60px, 60px, url("../../icons/stack.svg#leaf"));
+    background-size: 30px 32px;
+
+    @media (min-width: $desktop-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--watter::before {
-    @include icon-img (27px, 29px, url("../../icons/stack.svg#watter"));
+    @include icon-img (60px, 60px, url("../../icons/stack.svg#watter"));
+    background-size: 27px 29px;
+
+    @media (min-width: $desktop-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--eat::before {
-    @include icon-img (26px, 30px, url("../../icons/stack.svg#eat"));
+    @include icon-img (60px, 60px, url("../../icons/stack.svg#eat"));
+    background-size: 26px 30px;
+
+    @media (min-width: $desktop-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--timer::before {
-    @include icon-img (27px, 31px, url("../../icons/stack.svg#timer"));
+    @include icon-img (60px, 60px, url("../../icons/stack.svg#timer"));
+    background-size: 27px 31px;
+
+    @media (min-width: $desktop-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 }
 

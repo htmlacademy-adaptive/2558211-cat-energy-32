@@ -1,5 +1,34 @@
+.contacts {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 85% 1fr;
+    justify-content: flex-start;
+  }
+}
+
 .contacts__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
   background-color: $bg-default;
+  padding: 26px 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 70px;
+    gap: 308px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 163px 157px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 565px;
+    padding: 60px 78px 60px 80px;
+    margin: 95px 110px 106px;
+    gap: 87px;
+    z-index: 1;
+  }
 }
 
 .contacts__message {
@@ -16,6 +45,7 @@
 }
 
 .contacts__address {
+  @include flex (column, space-between, flex-start);
   font-family: $primary-font;
   font-size: 14px;
   line-height: 1.42;
@@ -23,7 +53,28 @@
   font-style: normal;
 
   @media (min-width: $tablet-width) {
+    align-items: flex-end;
+    gap: 20px;
     font-size: 16px;
     line-height: 1.25;
+    text-align: right;
+  }
+}
+
+.contacts iframe {
+  width: 100%;
+  height: 362px;
+  display: block;
+  border: none;
+  margin: none;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    height: 100%;
   }
 }

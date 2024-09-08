@@ -12,6 +12,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -29,20 +30,20 @@
       </picture>
     </a>
 
-    <nav class="navigation">
-      <button class="navigation__toggle" type="button">
+    <nav class="navigation navigation--close">
+      <button class="navigation__toggle button button--transparent" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
       <ul class="navigation__list site-list">
         <li class="site-list__item">
-          <a href="./index.html">Главная</a>
+          <a class="site-list__link" href="./index.html">Главная</a>
         </li>
         <li class="site-list__item site-list__item--active">
-          <a href="./catalog.html">Каталог продукции</a>
+          <a class="site-list__link" href="./catalog.html">Каталог продукции</a>
         </li>
         <li class="site-list__item">
-          <a href="#">Подбор программы</a>
+          <a class="site-list__link" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -54,7 +55,7 @@
 
       <ul class="catalog__list">
         <li class="catalog__item product">
-          <a class="product__link" href="#">
+          <a class="product__image-link" href="#">
             <picture>
               <source media="(min-width: 1440px)" srcset="./images/cat-energy-pro-500-chicken-desktop@1x.webp 1x, ./images/cat-energy-pro-500-chicken-desktop@1x.webp 2x" width="161" height="172" type="image/webp">
               <source media="(min-width: 768px)" srcset="./images/cat-energy-pro-500-chicken-tablet@1x.webp 1x, ./images/cat-energy-pro-500-chicken-tablet@1x.webp 2x" width="161" height="172" type="image/webp">
@@ -89,7 +90,7 @@
         </li>
 
         <li class="catalog__item product">
-          <a class="product__link" href="#">
+          <a class="product__image-link" href="#">
             <picture>
               <source media="(min-width: 1440px)" srcset="./images/cat-energy-pro-1000-chicken-desktop@1x.webp 1x, ./images/cat-energy-pro-1000-chicken-desktop@1x.webp 2x" width="172" height="196" type="image/webp">
               <source media="(min-width: 768px)" srcset="./images/cat-energy-pro-1000-chicken-tablet@1x.webp 1x, ./images/cat-energy-pro-1000-chicken-tablet@1x.webp 2x" width="168" height="206" type="image/webp">
@@ -102,7 +103,7 @@
           </a>
 
           <a class="product__link" href="#">
-            <h3 class="product-title">Cat Energy PRO 1000 г</h3>
+            <h3 class="product__title">Cat Energy PRO 1000 г</h3>
           </a>
 
           <ul class="product__details product-info">
@@ -124,7 +125,7 @@
         </li>
 
         <li class="catalog__item product">
-          <a class="product__link" href="#">
+          <a class="product__image-link" href="#">
             <picture>
               <source media="(min-width: 1440px)" srcset="./images/cat-energy-pro-500-fish-desktop@1x.webp 1x, ./images/cat-energy-pro-500-fish-desktop@1x.webp 2x" width="163" height="174" type="image/webp">
               <source media="(min-width: 768px)" srcset="./images/cat-energy-pro-500-fish-tablet@1x.webp 1x, ./images/cat-energy-pro-500-fish-tablet@1x.webp 2x" width="163" height="174" type="image/webp">
@@ -137,7 +138,7 @@
           </a>
 
           <a class="product__link" href="#">
-            <h3 class="product-title">Cat Energy PRO 500 г</h3>
+            <h3 class="product__title">Cat Energy PRO 500 г</h3>
           </a>
 
           <ul class="product__details product-info">
@@ -159,7 +160,7 @@
         </li>
 
         <li class="catalog__item product">
-          <a class="product__link" href="#">
+          <a class="product__image-link" href="#">
             <picture>
               <source media="(min-width: 1440px)" srcset="./images/cat-energy-pro-1000-fish-desktop@1x.webp 1x, ./images/cat-energy-pro-1000-fish-desktop@1x.webp 2x" width="172" height="196" type="image/webp">
               <source media="(min-width: 768px)" srcset="./images/cat-energy-pro-1000-fish-tablet@1x.webp 1x, ./images/cat-energy-pro-1000-fish-tablet@1x.webp 2x" width="168" height="200" type="image/webp">
@@ -172,7 +173,7 @@
           </a>
 
           <a class="product__link" href="#">
-            <h3 class="product-title">Cat Energy PRO 1000 г</h3>
+            <h3 class="product__title">Cat Energy PRO 1000 г</h3>
           </a>
 
           <ul class="product__details product-info">
@@ -194,7 +195,7 @@
         </li>
 
         <li class="catalog__item product">
-          <a class="product__link" href="#">
+          <a class="product__image-link" href="#">
             <picture>
               <source media="(min-width: 1440px)" srcset="./images/cat-energy-slim-500-buckwheat-desktop@1x.webp 1x, ./images/cat-energy-slim-500-buckwheat-desktop@1x.webp 2x" width="161" height="171" type="image/webp">
               <source media="(min-width: 768px)" srcset="./images/cat-energy-slim-500-buckwheat-tablet@1x.webp 1x, ./images/cat-energy-slim-500-buckwheat-tablet@1x.webp 2x" width="161" height="171" type="image/webp">
@@ -207,7 +208,7 @@
           </a>
 
           <a class="product__link" href="#">
-            <h3 class="product-title">Cat Energy SLIM 500 г</h3>
+            <h3 class="product__title">Cat Energy SLIM 500 г</h3>
           </a>
 
           <ul class="product__details product-info">
@@ -229,7 +230,7 @@
         </li>
 
         <li class="catalog__item product">
-          <a class="product__link" href="#">
+          <a class="product__image-link" href="#">
             <picture>
               <source media="(min-width: 1440px)" srcset="./images/cat-energy-slim-1000-buckwheat-desktop@1x.webp 1x, ./images/cat-energy-slim-1000-buckwheat-desktop@1x.webp 2x" width="172" height="196" type="image/webp">
               <source media="(min-width: 768px)" srcset="./images/cat-energy-slim-1000-buckwheat-tablet@1x.webp 1x, ./images/cat-energy-slim-1000-buckwheat-tablet@1x.webp 2x" width="168" height="200" type="image/webp">
@@ -242,7 +243,7 @@
           </a>
 
           <a class="product__link" href="#">
-            <h3 class="product-title">Cat Energy SLIM 1000 г</h3>
+            <h3 class="product__title">Cat Energy SLIM 1000 г</h3>
           </a>
 
           <ul class="product__details product-info">
@@ -264,7 +265,7 @@
         </li>
 
         <li class="catalog__item product">
-          <a class="product__link" href="#">
+          <a class="product__image-link" href="#">
             <picture>
               <source media="(min-width: 1440px)" srcset="./images/cat-energy-slim-500-rice-desktop@1x.webp 1x, ./images/cat-energy-slim-500-rice-desktop@1x.webp 2x" width="163" height="174" type="image/webp">
               <source media="(min-width: 768px)" srcset="./images/cat-energy-slim-500-rice-tablet@1x.webp 1x, ./images/cat-energy-slim-500-rice-tablet@1x.webp 2x" width="163" height="174" type="image/webp">
@@ -277,7 +278,7 @@
           </a>
 
           <a class="product__link" href="#">
-            <h3 class="product-title">Cat Energy SLIM 500 г</h3>
+            <h3 class="product__title">Cat Energy SLIM 500 г</h3>
           </a>
 
           <ul class="product__details product-info">
@@ -309,54 +310,56 @@
     <section class="additional-products">
       <h2 class="additional-products__title">Дополнительные товары</h2>
 
-      <ul class="additional-products__list">
-        <li class="additional-products__item additional-product">
-          <h3 class="additional-product__title">Сахарозаменитель</h3>
+      <div class="additional-products__wrapper">
+        <ul class="additional-products__list">
+          <li class="additional-products__item additional-product">
+            <h3 class="additional-product__title">Сахарозаменитель</h3>
 
-          <p class="additional-product__details additional-product-info">
-            <span class="additional-product-info__amount">1 упаковка (100 г)</span>
-            <span class="additional-product-info__price">200 ₽</span>
-          </p>
+            <p class="additional-product__details additional-product-info">
+              <span class="additional-product-info__amount">1 упаковка (100 г)</span>
+              <span class="additional-product-info__price">200 ₽</span>
+            </p>
 
-          <a class="additional-product__button button button--primary" href="#">Заказать</a>
-        </li>
+            <a class="additional-product__button button button--primary" href="#">Заказать</a>
+          </li>
 
-        <li class="additional-products__item additional-product">
-          <h3 class="additional-product__title">Питьевая вода</h3>
+          <li class="additional-products__item additional-product">
+            <h3 class="additional-product__title">Питьевая вода</h3>
 
-          <p class="additional-product__details additional-product-info">
-            <span class="additional-product-info__amount">5 литров</span>
-            <span class="additional-product-info__price">50 ₽</span>
-          </p>
+            <p class="additional-product__details additional-product-info">
+              <span class="additional-product-info__amount">5 литров</span>
+              <span class="additional-product-info__price">50 ₽</span>
+            </p>
 
-          <a class="additional-product__button button button--primary" href="#">Заказать</a>
-        </li>
+            <a class="additional-product__button button button--primary" href="#">Заказать</a>
+          </li>
 
-        <li class="additional-products__item additional-product">
-          <h3 class="additional-product__title">Молоко</h3>
+          <li class="additional-products__item additional-product">
+            <h3 class="additional-product__title">Молоко</h3>
 
-          <p class="additional-product__details additional-product-info">
-            <span class="additional-product-info__amount">1 литр</span>
-            <span class="additional-product-info__price">100 ₽</span>
-          </p>
+            <p class="additional-product__details additional-product-info">
+              <span class="additional-product-info__amount">1 литр</span>
+              <span class="additional-product-info__price">100 ₽</span>
+            </p>
 
-          <a class="additional-product__button button button--primary" href="#">Заказать</a>
-        </li>
+            <a class="additional-product__button button button--primary" href="#">Заказать</a>
+          </li>
 
-        <li class="additional-products__item additional-product">
-          <h3 class="additional-product__title">Витамины</h3>
+          <li class="additional-products__item additional-product">
+            <h3 class="additional-product__title">Витамины</h3>
 
-          <p class="additional-product__details additional-product-info">
-            <span class="additional-product-info__amount">1 упаковка (30 г)</span>
-            <span class="additional-product-info__price">300 ₽</span>
-          </p>
+            <p class="additional-product__details additional-product-info">
+              <span class="additional-product-info__amount">1 упаковка (30 г)</span>
+              <span class="additional-product-info__price">300 ₽</span>
+            </p>
 
-          <a class="additional-product__button button button--primary" href="#">Заказать</a>
-        </li>
-      </ul>
+            <a class="additional-product__button button button--primary" href="#">Заказать</a>
+          </li>
+        </ul>
 
-      <div class="additional-products__present present">
-        <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
+        <div class="additional-products__present present">
+          <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
       </div>
     </section>
 
@@ -388,25 +391,27 @@
   </main>
 
   <footer class="footer">
-    <a class="footer__logo" href="./index.html">
-      <img class="footer__logo-text" src="./images/footer-logo.svg" width="128" height="24" alt="Текстовый логотип Cat Energy">
-    </a>
+    <div class="footer__wrapper">
+      <a class="footer__logo" href="./index.html">
+        <img class="footer__logo-text" src="./images/footer-logo.svg" width="128" height="24" alt="Текстовый логотип Cat Energy">
+      </a>
 
-    <ul class="social-list">
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--vk" href="#"><span class="visually-hidden">ВКонтакте</span></a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--youtube" href="#"><span class="visually-hidden">Youtube</span></a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--tg" href="#"><span class="visually-hidden">Telegram</span></a>
-      </li>
-    </ul>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vk" href="#"><span class="visually-hidden">ВКонтакте</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--youtube" href="#"><span class="visually-hidden">Youtube</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--tg" href="#"><span class="visually-hidden">Telegram</span></a>
+        </li>
+      </ul>
 
-    <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
-      <span class="copyright__text">HTML Academy</span>
-    </a>
+      <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text">HTML Academy</span>
+      </a>
+    </div>
   </footer>
 </body>
 

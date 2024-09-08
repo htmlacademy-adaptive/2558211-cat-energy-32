@@ -30,3 +30,17 @@
   mask-position: center;
   background: $bg;
 }
+
+@mixin flex ($direction: row, $justify: space-between, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin pseudo-element ($width, $height) {
+  content: "";
+  display: block;
+  width: $width;
+  height: $height;
+}

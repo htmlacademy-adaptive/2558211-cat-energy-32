@@ -1,11 +1,33 @@
 .more-products {
+  @include flex (column, flex-start, center);
+  width: 100%;
+  padding: 25px 20px 24px;
+  text-align: center;
+
   &::before {
     @include icon-img (30px, 30px, url("../../icons/stack.svg#plus"));
+    margin-bottom: 23px;
 
     @media (min-width: $tablet-width) {
       width: 60px;
       height: 60px;
+      margin-bottom: 50px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-end;
+    width: 324px;
+    padding: 50px 37px 40px;
+    box-shadow: 0 0 0 2px $bg-secondary;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
   }
 }
 
@@ -16,10 +38,17 @@
   line-height: 1.25;
   font-weight: $font-weight-normal;
   text-transform: uppercase;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet-width) {
+    width: 170px;
+    margin-bottom: 23px;
     font-size: 20px;
     line-height: 1.2;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 26px;
   }
 }
 
@@ -29,14 +58,31 @@
   color: $gray-text;
   line-height: 1.33;
   font-weight: $font-weight-normal;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
+    width: 170px;
+    margin-bottom: 82px;
     font-size: 16px;
     line-height: 1.12;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 90px;
   }
 }
 
 .more-products__button {
+  width: 280px;
+  padding: 10px;
   font-size: 16px;
   line-height: 1.25;
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+  }
 }
