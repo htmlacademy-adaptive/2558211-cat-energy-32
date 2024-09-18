@@ -38,9 +38,10 @@
   align-items: $align;
 }
 
-@mixin pseudo-element ($width, $height) {
+@mixin pseudo-element ($width, $height, $position: static) {
   content: "";
   display: block;
   width: $width;
   height: $height;
+  position: $position;
 }

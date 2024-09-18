@@ -20,12 +20,30 @@
 }
 
 .footer__logo {
-  display: block;
+  @include flex (row, center, center);
+  width: 100%;
   padding: 20px 0;
   border-bottom: 1px solid $bg-accent-dark;
 
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.7;
+  }
+
   @media (min-width: $tablet-width) {
+    width: auto;
     border: none;
-    padding: 6px 0;
+    padding: 0;
   }
 }

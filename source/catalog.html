@@ -12,11 +12,15 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <link rel="stylesheet" href="styles/styles.css">
+
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header header--catalog">
     <a class="header__logo" href="./index.html">
       <picture>
         <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/logo-desktop.svg" width="70" height="59">
@@ -26,11 +30,11 @@
       <picture>
         <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/text-logo-desktop.svg" width="118" height="21">
         <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/text-logo-tablet.svg" width="101" height="18">
-        <img class="header__logo-text" src="./images/text-logo-mobile.svg" width="101" height="18" alt="Текстовый логотип Cat Energy">
+        <img class="header__logo-text header__logo-text--catalog" src="./images/text-logo-mobile.svg" width="101" height="18" alt="Текстовый логотип Cat Energy">
       </picture>
     </a>
 
-    <nav class="navigation navigation--close">
+    <nav class="navigation navigation--close navigation--nojs">
       <button class="navigation__toggle button button--transparent" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -315,10 +319,8 @@
           <li class="additional-products__item additional-product">
             <h3 class="additional-product__title">Сахарозаменитель</h3>
 
-            <p class="additional-product__details additional-product-info">
-              <span class="additional-product-info__amount">1 упаковка (100 г)</span>
-              <span class="additional-product-info__price">200 ₽</span>
-            </p>
+            <span class="additional-product__info-amount">1 упаковка (100 г)</span>
+            <span class="additional-product__info-price">200 ₽</span>
 
             <a class="additional-product__button button button--primary" href="#">Заказать</a>
           </li>
@@ -326,10 +328,8 @@
           <li class="additional-products__item additional-product">
             <h3 class="additional-product__title">Питьевая вода</h3>
 
-            <p class="additional-product__details additional-product-info">
-              <span class="additional-product-info__amount">5 литров</span>
-              <span class="additional-product-info__price">50 ₽</span>
-            </p>
+            <span class="additional-product__info-amount">5 литров</span>
+            <span class="additional-product__info-price">50 ₽</span>
 
             <a class="additional-product__button button button--primary" href="#">Заказать</a>
           </li>
@@ -337,10 +337,8 @@
           <li class="additional-products__item additional-product">
             <h3 class="additional-product__title">Молоко</h3>
 
-            <p class="additional-product__details additional-product-info">
-              <span class="additional-product-info__amount">1 литр</span>
-              <span class="additional-product-info__price">100 ₽</span>
-            </p>
+            <span class="additional-product__info-amount">1 литр</span>
+            <span class="additional-product__info-price">100 ₽</span>
 
             <a class="additional-product__button button button--primary" href="#">Заказать</a>
           </li>
@@ -348,17 +346,15 @@
           <li class="additional-products__item additional-product">
             <h3 class="additional-product__title">Витамины</h3>
 
-            <p class="additional-product__details additional-product-info">
-              <span class="additional-product-info__amount">1 упаковка (30 г)</span>
-              <span class="additional-product-info__price">300 ₽</span>
-            </p>
+            <span class="additional-product__info-amount">1 упаковка (30 г)</span>
+            <span class="additional-product__info-price">300 ₽</span>
 
             <a class="additional-product__button button button--primary" href="#">Заказать</a>
           </li>
         </ul>
 
         <div class="additional-products__present present">
-          <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
+          <p class="present__text">Закажите все<br>и получите чехол для кота в подарок!</p>
         </div>
       </div>
     </section>
@@ -378,15 +374,17 @@
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
 
-      <div class="contacts__container">
-        <p class="contacts__message">приглашаем к сотрудничеству дилеров!</p>
+      <div class="contacts__container contacts__container--catalog">
+        <p class="contacts__message">приглашаем<br>к сотрудничеству<br>дилеров!</p>
         <address class="contacts__address">
           <span>ул. Большая Конюшенная, д. 19/8</span>
           <span>Санкт-Петербург</span>
         </address>
       </div>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198223!2d30.320472477458367!3d59.93871916209349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QspanGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1722879318812!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="contacts__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198223!2d30.320472477458367!3d59.93871916209349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1722879318812!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </section>
   </main>
 

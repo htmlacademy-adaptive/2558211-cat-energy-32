@@ -1,6 +1,6 @@
 .about {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 20px 0;
 
   @media (min-width: $tablet-width) {
     padding: 45px 30px 47px;
@@ -8,7 +8,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 1440px;
-    padding: 0 110px 69px;
+    padding: 0 110px 50px;
   }
 }
 
@@ -39,13 +39,13 @@
   list-style: none;
 
   @media (min-width: $tablet-width) {
+    display: grid;
+    justify-content: flex-start;
+    gap: 37px 153px;
+    grid-template-columns: 230px 245px;
     font-size: 16px;
     line-height: 1.5;
     padding: 0;
-    display: grid;
-    justify-content: flex-start;
-    gap: 37px 137px;
-    grid-template-columns: 230px 245px;
 
     counter-reset: section;
   }
@@ -57,6 +57,7 @@
 }
 
 .about__item {
+  position: relative;
   display: grid;
   grid-template-columns: 60px 1fr;
   gap: 20px;
@@ -75,23 +76,28 @@
 
     &::after {
       content: counter(section);
+      position: absolute;
+      justify-self: end;
       font-family: $secondary-font;
       font-weight: $font-weight-normal;
       font-size: 280px;
       line-height: 1;
-      position: absolute;
       counter-increment: section 1;
       color: $bg-secondary;
-      justify-self: end;
       z-index: -1;
+      left: 115px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
   }
 
   &--leaf::before {
     @include icon-img (60px, 60px, url("../../icons/stack.svg#leaf"));
     background-size: 30px 32px;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       width: 80px;
       height: 80px;
     }
@@ -101,7 +107,7 @@
     @include icon-img (60px, 60px, url("../../icons/stack.svg#watter"));
     background-size: 27px 29px;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       width: 80px;
       height: 80px;
     }
@@ -111,7 +117,7 @@
     @include icon-img (60px, 60px, url("../../icons/stack.svg#eat"));
     background-size: 26px 30px;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       width: 80px;
       height: 80px;
     }
@@ -121,7 +127,7 @@
     @include icon-img (60px, 60px, url("../../icons/stack.svg#timer"));
     background-size: 27px 31px;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       width: 80px;
       height: 80px;
     }

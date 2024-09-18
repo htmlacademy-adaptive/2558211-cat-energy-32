@@ -1,34 +1,35 @@
 .promo {
+  position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding-top: 27px;
+  overflow-x: hidden;
   font-family: $secondary-font;
   color: $light-text;
-  background-color: $bg-primary;
-  background-image:
-    image-set(url("../../images/promo-cat-mobile@1x.webp") type("image/webp") 1x,
-    url("../../images/promo-cat-mobile@2x.webp") type("image/webp") 2x,
-    url("../../images/promo-cat-mobile@1x.png") type("image/png") 1x,
-    url("../../images/promo-cat-mobile@1x.png") type("image/png") 2x);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 2;
-  position: relative;
+  margin-bottom: 20px;
+  padding-top: 27px;
 
   &::before {
-    @include pseudo-element (100%, 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include pseudo-element (100%, auto, absolute);
+    margin-bottom: 176px;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba($bg-primary, 0.85), rgba($bg-primary, 0.85)),
+      image-set(
+        url("../../images/promo-cat-mobile@1x.webp") type("image/webp") 1x,
+        url("../../images/promo-cat-mobile@2x.webp") type("image/webp") 2x,
+        url("../../images/promo-cat-mobile@1x.png") type("image/png") 1x,
+        url("../../images/promo-cat-mobile@2x.png") type("image/png") 2x
+      ),
+      linear-gradient(to right, rgba($gray, 1), rgba($gray, 1));
+    background-size: auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
     z-index: -1;
-    background: linear-gradient(to bottom, (rgba(104, 183, 56, 0.85) 63%, $bg-default 63%));
   }
 
   @media (min-width: $tablet-width) {
     color: $dark-text;
     background-color: $bg-default;
-    background-image: none;
+    margin-bottom: 0;
     padding: 0 30px;
     padding-top: 40px;
 
@@ -39,15 +40,26 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 0;
-    background-image:
-      linear-gradient(to right, $bg-default 50%, rgba(104, 183, 56, 0.85) 50%),
-      image-set(url("../../images/promo-cat-desktop@1x.webp") type("image/webp") 1x,
-      url("../../images/promo-cat-desktop@2x.webp") type("image/webp") 2x,
-      url("../../images/promo-cat-desktop@1x.png") type("image/png") 1x,
-      url("../../images/promo-cat-desktop@1x.png") type("image/png") 2x);
-    background-position: center right;
-    background-repeat: repeat no-repeat;
-    background-size: auto contain;
+    background-color: transparent;
+
+    &::before {
+      @include pseudo-element (100%, auto, absolute);
+      margin: 0;
+      inset: 0 0 0 50%;
+      background-image:
+        linear-gradient(to bottom, rgba($bg-primary, 0.85), rgba($bg-primary, 0.85)),
+        image-set(
+          url("../../images/promo-cat-desktop@1x.webp") type("image/webp") 1x,
+          url("../../images/promo-cat-desktop@2x.webp") type("image/webp") 2x,
+          url("../../images/promo-cat-desktop@1x.png") type("image/png") 1x,
+          url("../../images/promo-cat-desktop@2x.png") type("image/png") 2x
+        ),
+        linear-gradient(to right, rgba($gray, 1), rgba($gray, 1));
+      background-size: auto 694px;
+      background-position: top left;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
   }
 }
 
@@ -64,10 +76,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 1440px;
-    padding: 0 110px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    max-width: 1440px;
+    padding: 0 110px;
   }
 }
 
@@ -82,12 +95,12 @@
     font-size: 60px;
     width: 420px;
     margin-bottom: 40px;
-    margin-left: 90px;
+    margin-left: 60px;
   }
 
   @media (min-width: $desktop-width) {
     width: auto;
-    margin: 224px 0 40px 80px;
+    margin: 224px 0 40px 50px;
     grid-column: 1/2;
   }
 }
@@ -102,12 +115,12 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    margin-left: 90px;
-    margin-bottom: 50px;
+    margin-left: 60px;
+    margin-bottom: 47px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 52px 80px;
+    margin: 0 0 52px 50px;
     grid-column: 1/2;
   }
 }
@@ -117,6 +130,7 @@
   line-height: 1.25;
   width: 100%;
   order: 1;
+  margin-top: 3px;
   padding: 10px 0;
 
   @media (min-width: $tablet-width) {
@@ -124,19 +138,28 @@
     line-height: 1.3;
     order: 0;
     width: 244px;
+    margin-left: 60px;
     padding: 14px 26px;
     z-index: 1;
-    margin-left: 90px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 184px 80px;
+    margin: 0 0 184px 50px;
     grid-column: 1/2;
   }
 }
 
 .promo__image {
   @media (min-width: $tablet-width) {
-    margin-top: -73px;
+    margin-top: -82px;
+    margin-left: -30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    margin: 143px 0 0 -163px;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    z-index: 1;
   }
 }

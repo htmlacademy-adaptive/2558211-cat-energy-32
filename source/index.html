@@ -12,6 +12,10 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <link rel="stylesheet" href="styles/styles.css">
+
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -30,7 +34,7 @@
       </picture>
     </a>
 
-    <nav class="navigation navigation--main navigation--close">
+    <nav class="navigation navigation--main navigation--close navigation--nojs">
       <button class="navigation__toggle button button--transparent" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -168,14 +172,16 @@
       <h2 class="visually-hidden">Контакты</h2>
 
       <div class="contacts__container contacts__container--desktop">
-        <p class="contacts__message">приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__message">приглашаем<br>к сотрудничеству<br>дилеров!</p>
         <address class="contacts__address">
           <span class="contacts__street">ул. Большая Конюшенная, д. 19/8</span>
           <span class="contacts__city">Санкт-Петербург</span>
         </address>
       </div>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198223!2d30.320472477458367!3d59.93871916209349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1722879318812!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="contacts__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198223!2d30.320472477458367!3d59.93871916209349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1722879318812!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </section>
   </main>
 
