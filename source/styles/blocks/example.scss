@@ -7,7 +7,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-color: $bg-secondary;
+    background-image: linear-gradient(to top, $bg-secondary 462px, $bg-default 462px);
   }
 }
 
