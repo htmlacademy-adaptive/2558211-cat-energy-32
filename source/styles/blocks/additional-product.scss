@@ -1,0 +1,124 @@
+.additional-product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 13px 0 19px;
+  border-bottom: 1px solid $light-gray;
+
+  &:first-child {
+    border-top: 1px solid $light-gray;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 400px 137px 1fr;
+    row-gap: 21px;
+    padding: 24px 38px 28px;
+    border-left: 1px solid $light-gray;
+    border-right: 1px solid $light-gray;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 0;
+    padding: 14px 0 17px;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.additional-product__title {
+  grid-column: 1/2;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: $font-weight-normal;
+  color: $dark-gray-text;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/3;
+    align-self: center;
+    margin: 0;
+  }
+}
+
+.additional-product__info-amount {
+  grid-column: 1/2;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: $font-weight-normal;
+  color: $gray-text;
+  margin: 0;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: end;
+    align-self: end;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 4/6;
+    text-align: left;
+    align-self: center;
+    padding-top: 5px;
+  }
+}
+
+.additional-product__info-price {
+  grid-column: 2/3;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: $font-weight-normal;
+  color: $gray-text;
+  margin: 0;
+  margin-bottom: 14px;
+  text-align: end;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 3/4;
+    align-self: end;
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0;
+    padding-right: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 6/7;
+    align-self: center;
+    text-align: left;
+    padding-top: 3px;
+    padding-left: 26px;
+  }
+}
+
+.additional-product__button {
+  display: block;
+  grid-column: 1/-1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.25;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 7/8;
+    justify-self: end;
+    width: 244px;
+    margin: 0;
+  }
+}

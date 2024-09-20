@@ -1,1 +1,36 @@
-/* здесь используйте глобальные переменные */
+// Fonts
+$primary-font: "Lato", "Arial", sans-serif;
+$secondary-font: "Oswald", "Arial", sans-serif;
+
+// Width points
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+// Font weight
+$font-weight-normal: 400;
+
+// Text color
+$light-text: #ffffff;
+$light-gray-text: #666666;
+$gray-text: #444444;
+$dark-gray-text: #222222;
+$dark-text-lighten: #111111;
+$dark-text: #000000;
+
+// Background
+$bg-default: #ffffff;
+$bg-primary: #68b738;
+$bg-primary-hover: #5eaa2f;
+$bg-secondary: #f2f2f2;
+$bg-secondary-hover: #ebebeb;
+$bg-light: #eaeaea;
+$bg-accent-color: #e6e6e6;
+$bg-accent-light: #ebebeb;
+$bg-accent-dark: #d9d9d9;
+
+// Colors
+$accent-gray: #e7e7e7;
+$light-gray: #cdcdcd;
+$gray: #444444;
+$danger: #ff8282;

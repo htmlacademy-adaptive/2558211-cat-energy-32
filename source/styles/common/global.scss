@@ -1,1 +1,29 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+picture,
+source {
+  display: contents;
+}
+
+img {
+  display: block;
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,5 +1,88 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  @include flex (row, space-between, center);
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 65px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    flex-wrap: nowrap;
+    align-self: flex-start;
+    padding: 25px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 55px 110px;
+    max-width: 1440px;
+  }
+
+  &--main {
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+  }
+
+  &--catalog {
+    &::after {
+      @include pseudo-element (100%, 1px);
+      background-color: $bg-accent-dark;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 24px;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        display: none;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 55px;
+    }
+  }
+}
+
+.header__logo {
+  @include flex (row, space-between, center);
+  gap: 56px;
+  padding: 13px 20px;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.7;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 13px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+    gap: 14px;
+  }
+}
+
+.header__logo-text {
+  &--catalog {
+    margin-top: 5px;
+  }
 }

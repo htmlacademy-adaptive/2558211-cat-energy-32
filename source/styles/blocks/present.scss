@@ -1,0 +1,77 @@
+.present {
+  @include flex (column, space-between, center);
+  gap: 48px;
+  background-color: $bg-primary;
+  background-image:
+    image-set(url("../../images/present-cat-mobile@1x.webp") type("image/webp") 1x,
+    url("../../images/present-cat-mobile@2x.webp") type("image/webp") 2x,
+    url("../../images/present-cat-mobile@1x.png") type("image/png") 1x,
+    url("../../images/present-cat-mobile@2x.png") type("image/png") 2x);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding: 58px 61px 41px 58px;
+
+  &::before {
+    @include icon-img (78px, 81px, url("../../icons/stack.svg#present"));
+    position: relative;
+    z-index: 3;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 83px;
+    }
+  }
+
+  &::after {
+    @include pseudo-element (100%, 100%, absolute);
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(104, 183, 56, 0.85);
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    background-image:
+      image-set(url("../../images/present-cat-tablet@1x.webp") type("image/webp") 1x,
+      url("../../images/present-cat-tablet@2x.webp") type("image/webp") 2x,
+      url("../../images/present-cat-tablet@1x.png") type("image/png") 1x,
+      url("../../images/present-cat-tablet@2x.png") type("image/png") 2x);
+    padding: 56px 125px 61px 78px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    gap: 46px;
+    background-image:
+      image-set(url("../../images/present-cat-desktop@1x.webp") type("image/webp") 1x,
+      url("../../images/present-cat-desktop@2x.webp") type("image/webp") 2x,
+      url("../../images/present-cat-desktop@1x.png") type("image/png") 1x,
+      url("../../images/present-cat-desktop@2x.png") type("image/png") 2x);
+    padding: 56px 42px 43px;
+  }
+}
+
+.present__text {
+  position: relative;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: $font-weight-normal;
+  color: $light-text;
+  margin: 0;
+  z-index: 3;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 161px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}

@@ -1,0 +1,49 @@
+.footer {
+  width: 100%;
+  background-color: $bg-secondary;
+}
+
+.footer__wrapper {
+  @include flex (column, space-between, center);
+  margin: 0 auto;
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    padding: 55px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    padding: 66px 110px;
+  }
+}
+
+.footer__logo {
+  @include flex (row, center, center);
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid $bg-accent-dark;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.7;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    border: none;
+    padding: 0;
+  }
+}
