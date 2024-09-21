@@ -5,8 +5,8 @@
   background-image:
     image-set(url("../../images/present-cat-mobile@1x.webp") type("image/webp") 1x,
     url("../../images/present-cat-mobile@2x.webp") type("image/webp") 2x,
-    url("../../images/present-cat-mobile@1x.png") type("image/png") 1x,
-    url("../../images/present-cat-mobile@2x.png") type("image/png") 2x);
+    url("../../images/present-cat-mobile@1x.jpg") type("image/jpeg") 1x,
+    url("../../images/present-cat-mobile@2x.jpg") type("image/jpeg") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -38,8 +38,8 @@
     background-image:
       image-set(url("../../images/present-cat-tablet@1x.webp") type("image/webp") 1x,
       url("../../images/present-cat-tablet@2x.webp") type("image/webp") 2x,
-      url("../../images/present-cat-tablet@1x.png") type("image/png") 1x,
-      url("../../images/present-cat-tablet@2x.png") type("image/png") 2x);
+      url("../../images/present-cat-tablet@1x.jpg") type("image/jpeg") 1x,
+      url("../../images/present-cat-tablet@2x.jpg") type("image/jpeg") 2x);
     padding: 56px 125px 61px 78px;
   }
 
@@ -49,8 +49,8 @@
     background-image:
       image-set(url("../../images/present-cat-desktop@1x.webp") type("image/webp") 1x,
       url("../../images/present-cat-desktop@2x.webp") type("image/webp") 2x,
-      url("../../images/present-cat-desktop@1x.png") type("image/png") 1x,
-      url("../../images/present-cat-desktop@2x.png") type("image/png") 2x);
+      url("../../images/present-cat-desktop@1x.jpg") type("image/jpeg") 1x,
+      url("../../images/present-cat-desktop@2x.jpg") type("image/jpeg") 2x);
     padding: 56px 42px 43px;
   }
 }

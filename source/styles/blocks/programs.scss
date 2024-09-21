@@ -37,15 +37,17 @@
   @media (min-width: $desktop-width) {
     width: 570px;
     grid-template-columns: auto 1fr;
+    grid-template-rows: 145px auto;
     column-gap: 62px;
     align-items: flex-end;
+    align-self: stretch;
 
     &--slim {
       padding: 41px 61px 55px 52px;
     }
 
     &--pro {
-      padding: 47px 67px 55px 52px;
+      padding: 40px 67px 55px 52px;
     }
   }
 
