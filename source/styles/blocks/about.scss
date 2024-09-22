@@ -51,8 +51,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include flex (row, space-between, center);
-    gap: 77px;
+    @include flex (row, center, center);
+    gap: 80px;
+    flex-wrap: wrap;
   }
 }
 

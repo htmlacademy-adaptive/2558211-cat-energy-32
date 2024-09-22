@@ -13,11 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-picture,
-source {
-  display: contents;
-}
-
 img {
   display: block;
   object-fit: contain;

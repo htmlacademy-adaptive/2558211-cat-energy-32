@@ -7,7 +7,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-image: linear-gradient(to top, $bg-secondary 462px, $bg-default 462px);
+    background-image: linear-gradient(to bottom, $bg-default 155px, $bg-secondary 155px);
   }
 }
 
@@ -197,6 +197,11 @@
     grid-column: 2/3;
     grid-row: 1/4;
   }
+}
+
+.example__slider picture,
+.example__slider source {
+  display: contents;
 }
 
 .example__before {
